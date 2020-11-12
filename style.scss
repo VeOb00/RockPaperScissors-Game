@@ -1,0 +1,188 @@
+$c-dark: #c8601a;
+$c-medium: #fd8a29;
+$c-bg: #ffbea7;
+$c-bg-shade: #f1ab90;
+$c-bg-light: hsl(17, 78%, 90%);
+$c-bg-light-t: hsla(17, 76%, 90%, 0.6);
+$c-text: hsl(203, 13%, 30%);
+
+* {
+	color: $c-text;
+}
+
+img {
+	width: 100%;
+}
+
+body {
+	background-color: hsl(17, 78%, 98%);
+}
+
+button img {
+	width: 55px;
+	transition: transform 1s;
+}
+button img:hover {
+	transform: scale(1.1);
+}
+
+.gameplay {
+	img {
+		width: 100px;
+		filter: opacity(0.2) drop-shadow(0 0 0 $c-medium);
+	}
+
+	.user img {
+		transform: scale(-1, 1);
+	}
+}
+
+.comp-animation {
+	animation: shake-right 0.3s;
+	animation-iteration-count: infinite;
+}
+
+.user-animation {
+	animation: shake-left 0.3s;
+	animation-iteration-count: infinite;
+}
+
+.hero {
+	background-image: url("img/rock-paper-scissors-flat-icons.png");
+	min-height: 25vh;
+	background-position: center;
+	background-size: contain;
+	background-repeat: repeat-x;
+	background-color: $c-bg;
+
+	.logo-text {
+		font-family: "Oswald", sans-serif;
+		border: 7px solid $c-dark;
+		background-color: $c-bg-light-t;
+		padding: 10px 20px;
+		margin-top: 10px;
+	}
+}
+
+.text-orange {
+	color: $c-dark;
+}
+
+.display-5 {
+	font-size: 1.4rem;
+	font-weight: 350;
+	line-height: 1.2;
+	text-transform: uppercase;
+}
+
+.add-color {
+	color: $c-dark;
+}
+
+.btn-custom {
+	background-color: $c-bg-light;
+}
+.btn-custom:active,
+.btn-custom.active,
+.show > .btn-custom.dropdown-toggle {
+	border-color: $c-medium;
+}
+
+.btn-custom:focus,
+.swal2-styled:focus {
+	box-shadow: 0px 0px 6px $c-medium !important;
+}
+
+.btn-custom:hover {
+	background-color: $c-bg;
+	box-shadow: 2px 2px 1px $c-bg-shade;
+}
+
+@media screen and (min-width: 768px) {
+	.hero {
+		min-height: 30vh;
+		.hero-text {
+			h2 {
+				font-size: 3rem;
+			}
+			h4 {
+				text-shadow: 0 0 1px $c-medium;
+				font-size: 1.8rem;
+			}
+		}
+	}
+	.gameplay img {
+		width: 200px;
+	}
+}
+
+@keyframes shake-right {
+	0% {
+		transform: translate(1px, 1px) rotate(0deg);
+	}
+	10% {
+		transform: translate(-1px, -2px) rotate(-1deg);
+	}
+	20% {
+		transform: translate(-3px, 0px) rotate(+1deg);
+	}
+	30% {
+		transform: translate(3px, 2px) rotate(0deg);
+	}
+	40% {
+		transform: translate(1px, -1px) rotate(1deg);
+	}
+	50% {
+		transform: translate(-1px, 2px) rotate(-1deg);
+	}
+	60% {
+		transform: translate(-3px, 1px) rotate(0deg);
+	}
+	70% {
+		transform: translate(3px, 1px) rotate(-1deg);
+	}
+	80% {
+		transform: translate(-1px, -1px) rotate(1deg);
+	}
+	90% {
+		transform: translate(1px, 2px) rotate(0deg);
+	}
+	100% {
+		transform: translate(1px, -2px) rotate(-1deg);
+	}
+}
+@keyframes shake-left {
+	0% {
+		transform: scale(1, -1) translate(1px, 1px) rotate(180deg);
+	}
+	10% {
+		transform: scale(1, -1) translate(-1px, -2px) rotate(179deg);
+	}
+	20% {
+		transform: scale(1, -1) translate(-3px, 0px) rotate(181deg);
+	}
+	30% {
+		transform: scale(1, -1) translate(3px, 2px) rotate(180deg);
+	}
+	40% {
+		transform: scale(1, -1) translate(1px, -1px) rotate(181deg);
+	}
+	50% {
+		transform: scale(1, -1) translate(-1px, 2px) rotate(179deg);
+	}
+	60% {
+		transform: scale(1, -1) translate(-3px, 1px) rotate(180deg);
+	}
+	70% {
+		transform: scale(1, -1) translate(3px, 1px) rotate(179deg);
+	}
+	80% {
+		transform: scale(1, -1) translate(-1px, -1px) rotate(181deg);
+	}
+	90% {
+		transform: scale(1, -1) translate(1px, 2px) rotate(180deg);
+	}
+	100% {
+		transform: scale(1, -1) translate(1px, -2px) rotate(179deg);
+	}
+}

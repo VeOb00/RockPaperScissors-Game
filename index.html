@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rock paper scissors</title>
+    <script src="rps.js" defer></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="hero mb-3 mb-sm-5 d-flex align-items-center justify-content-center">
+        <div class="hero-text mb-1 mb-md-3">
+            <div class="logo-text">
+                <h2 class="text-center mb-0 text-orange">rock</h2>
+                <h2 class="text-center mb-0 text-orange">paper</h2>
+                <h2 class="text-center mb-0 text-orange">scissors</h2>
+            </div>
+            <h4 class="text-center text-orange">best of 5</h4>
+        </div>
+    </div>
+    <div class="container">
+
+        <div class="text-center mx-center">
+
+            <div id="round row" class="display-5">
+                <h4 class="display-5 mb-0">Round</h4>
+                <p id="roundNr">0</p>
+            </div>
+
+            <div class="gamecount row mx-center">
+                <div class="col display-5">
+                    <h4 class="display-5 mb-0">win</h4>
+                    <p id="userWin">0</p>
+                </div>
+                <div class="col-2 display-5">
+                    <h4 class="display-5 mb-0">tie</h4>
+                    <p id="tie">0</p>
+                </div>
+                <div class="col display-5">
+                    <h4 class="display-5 mb-0">lose</h4>
+                    <p id="computerWin">0</p>
+                </div>
+            </div>
+
+            <div class="gameplay row py-sm-5 py-4">
+                <div class="user col">
+                    <img id="userImg" src="img/rock_icon.png" alt="played hand" srcset="">
+                </div>
+                <div class="gameStatus col-md-3 d-none d-md-inline"></div>
+                <div class="computer col">
+                    <img id="computerImg" src="img/rock_icon.png" alt="played hand" srcset="">
+                </div>
+            </div>
+
+
+            <div id="buttons" class="my-3">
+                <h4 class="text-orange">Play!</h4>
+                <button class="btn btn-custom btn-lg" value="rock">
+                    <img src="img/rock_button.png" alt="rock">
+                </button>
+                <button class="btn btn-custom btn-lg mx-1 mx-md-3" value="paper"><img src="img/paper_button.png"
+                        alt="paper">
+                </button>
+                <button class="btn btn-custom btn-lg" value="scissors"><img src="img/scissors_button.png"
+                        alt="scissors">
+                </button>
+            </div>
+            <div class="gameStatus d-md-none"></div>
+
+        </div>
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
+</body>
+
+</html>
